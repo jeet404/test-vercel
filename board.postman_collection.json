@@ -1,0 +1,1541 @@
+{
+	"info": {
+		"_postman_id": "4b5e93c3-64f2-4e27-8969-bb686da438ab",
+		"name": "kanban1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "sahilsah",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "sahilsah@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OCwiZXhwIjoxNjc5MDU1Mzc0LCJpYXQiOjE2NzkwNTE3NzR9.aCBb41dqhXJjPGMIJD9S8oh7FptNYvOzzZ0tH6Mv4-I",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sahilsakhavala0077@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "sahil@222",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/getuser/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getuser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallusers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/getalluser/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getalluser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c4211ef2-9a05-4aec-87b8-6b09e81b2a5b",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "s",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "s@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/Baby-Groot Medium.png"
+								},
+								{
+									"key": "job_title",
+									"value": "Software Developer",
+									"type": "default"
+								},
+								{
+									"key": "department_or_team",
+									"value": "dvdvdd",
+									"type": "default"
+								},
+								{
+									"key": "about_me",
+									"value": "I am a highly motivated and experienced software developer with over 5 years of experience in the industry. I specialize in developing web applications and have a strong understanding of both front-end and back-end technologies.",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updateuser/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updateuser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepassword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "new_password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updatepassword/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatepassword",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sahilsakhavala0077@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/sendmail/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sendmail",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "sahil@222",
+									"type": "default"
+								},
+								{
+									"key": "token",
+									"value": "ee5c7c43-6e46-454e-8214-da361d112a8b",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/forgetpassword/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forgetpassword",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "add_project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "user1234567890",
+									"type": "default"
+								},
+								{
+									"key": "color",
+									"value": "#8B7AC7",
+									"type": "default"
+								},
+								{
+									"key": "private",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/addproject/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addproject",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getproject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getproject/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getproject",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteproject",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "user",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/deleteproject/88",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deleteproject",
+								"88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateproject",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c4211ef2-9a05-4aec-87b8-6b09e81b2a5b",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Admin app ",
+									"type": "default"
+								},
+								{
+									"key": "private",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updateproject/40",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updateproject",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getprojectbyuser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{local_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_url}}/getprojectbyuser/",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"getprojectbyuser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getpro",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getpro/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getpro",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getassignee",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "b743c57e-a62e-4224-a502-681d4e6d0939",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getassignee/18",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getassignee",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecolor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "color",
+									"value": "black",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updatecolor/29",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatecolor",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_assignee_by_id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getassigneebyid?project_id=7&assignee_id=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getassigneebyid"
+							],
+							"query": [
+								{
+									"key": "project_id",
+									"value": "7"
+								},
+								{
+									"key": "assignee_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inviteuser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project_id",
+									"value": "177",
+									"type": "default"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/inviteuser/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inviteuser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_invite_user_and_owners",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/getinviteuser/36",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getinviteuser",
+								"36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_user_from_project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "41",
+									"type": "default"
+								},
+								{
+									"key": "user",
+									"value": "4",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/removeuserfromproject/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"removeuserfromproject",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "board",
+			"item": [
+				{
+					"name": "addboard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "this is board",
+									"type": "default"
+								},
+								{
+									"key": "project",
+									"value": "333",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/addboard/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addboard",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getboard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c4211ef2-9a05-4aec-87b8-6b09e81b2a5b",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Admin app ",
+									"type": "default"
+								},
+								{
+									"key": "private",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/getboard/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getboard",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteboard",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/deleteboard/36",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deleteboard",
+								"36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateboard",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Board",
+									"type": "default"
+								},
+								{
+									"key": "project",
+									"value": "9",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updateboard/36",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updateboard",
+								"36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getboardbyproject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getboarbyproject/145",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getboarbyproject",
+								"145"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "moveboard",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "index",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/moveboard/539",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"moveboard",
+								"539"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "addtask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "39",
+									"type": "default"
+								},
+								{
+									"key": "board",
+									"value": "57",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "My task",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addtask/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addtask",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletetask",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/deletetask/104",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deletetask",
+								"104"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatetask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "41",
+									"type": "default"
+								},
+								{
+									"key": "board",
+									"value": "65",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "this is task2",
+									"type": "default"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/backend/media/djangoimage/Baby-Groot_Medium.png",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "this is description",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "assignee",
+									"value": "4",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "due_date",
+									"value": "2023-06-12",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "priority",
+									"value": "high",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "subtasks",
+									"value": "[{\"title\": \"Subtask 1\"}, {\"title\": \"Subtask 2\"}, {\"title\": \"Subtask 3\"}]",
+									"type": "default"
+								},
+								{
+									"key": "labels",
+									"value": "[{\"name\": \"Label 1\", \"color\": \"Red\"}, {\"name\": \"Label 2\", \"color\": \"Blue\"}, {\"name\": \"Label 3\", \"color\": \"Green\"}]",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "comments",
+									"value": "[{\"comment\": \"Comment 1\", \"assignee\":  4}, {\"comment\": \"Comment 2\", \"assignee\": 4}, {\"comment\": \"Comment 3\", \"assignee\": 4}]",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "completed",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "[{\"label\": \"Label 1\", \"color\": \"Red\"}, {\"label\": \"Label 2\", \"color\": \"Blue\"}, {\"label\": \"Label 3\", \"color\": \"Green\"}]",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "subtask_completed",
+									"value": "1",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/updatetask/158",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatetask",
+								"158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gettasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/gettasks/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gettasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_tasks_by_project_and_board",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/gettasksbyprojectandboard/?project_id=56&board_id=22",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gettasksbyprojectandboard",
+								""
+							],
+							"query": [
+								{
+									"key": "project_id",
+									"value": "56"
+								},
+								{
+									"key": "board_id",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatetaskboard",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board",
+									"value": "497",
+									"type": "default"
+								},
+								{
+									"key": "index",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updatetaskboard/260",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatetaskboard",
+								"260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_task_same_board",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "board",
+									"value": "41",
+									"type": "default"
+								},
+								{
+									"key": "index",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updatetaskexistingboard/274",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatetaskexistingboard",
+								"274"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like_task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "330edd99-8605-4a14-becc-04b1a0c12e70",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "task",
+									"value": "378",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/liketask/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"liketask",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movetaskinproject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "186",
+									"type": "default"
+								},
+								{
+									"key": "board",
+									"value": "620",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/movetaskinproject/387",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movetaskinproject",
+								"387"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "permission",
+			"item": [
+				{
+					"name": "addpermission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "25",
+									"type": "default"
+								},
+								{
+									"key": "user",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "is_permission",
+									"value": "1",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addpermission/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addpermission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getpermission",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getpermission/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getpermission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getpermissionusingpid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/getpermissionusingpid/16",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getpermissionusingpid",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_permission",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/deletepermission/29",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deletepermission",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_permission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project",
+									"value": "25",
+									"type": "default"
+								},
+								{
+									"key": "user",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "is_permission",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/updatepermission/51",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updatepermission",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignee_remove",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/assigneeremove/?project_id=7&assignee_id=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"assigneeremove",
+								""
+							],
+							"query": [
+								{
+									"key": "project_id",
+									"value": "7"
+								},
+								{
+									"key": "assignee_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

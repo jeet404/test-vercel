@@ -1,0 +1,856 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Board-NodeJS",
+    "dateExported": "2023-07-25T09:54:13.572Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "User",
+            "containerId": "",
+            "created": "2023-07-14T06:06:10.140Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "287f19cb-939e-41c9-a4b1-6337ad4e6fc0",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2023-07-17T09:15:29.217Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "3f858f09-440f-4586-8dc1-548f0210fc2a",
+            "name": "In-Out Operations",
+            "containerId": "287f19cb-939e-41c9-a4b1-6337ad4e6fc0",
+            "created": "2023-07-17T09:15:41.823Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "97be142f-2f2b-4d4a-b915-bf34fec6a7b8",
+            "name": "Project",
+            "containerId": "",
+            "created": "2023-07-18T08:46:29.167Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "71feac90-d384-4fee-86ae-7becd7169c13",
+            "name": "Team",
+            "containerId": "287f19cb-939e-41c9-a4b1-6337ad4e6fc0",
+            "created": "2023-07-18T04:42:09.012Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "User",
+            "containerId": "287f19cb-939e-41c9-a4b1-6337ad4e6fc0",
+            "created": "2023-07-18T12:08:53.847Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Board",
+            "containerId": "",
+            "created": "2023-07-24T10:06:46.513Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ceeb90cf-4a8f-4be9-bc52-2c27b9d8197a",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Login User",
+            "url": "{{url}}api/user/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-14T06:05:57.516Z",
+            "modified": "2023-07-18T09:57:25.098Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"jeet.webappdev@gmail.com\",\n  \"password\": \"jeet@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "674b9ea8-59ed-42ff-b266-18f027470eb7",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Signup User",
+            "url": "{{url}}api/user/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-14T06:17:38.337Z",
+            "modified": "2023-07-18T08:40:06.622Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"jeet404\",\n  \"email\": \"jeet.webappdev@gmail.com\",\n  \"password\": \"jeet@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c8258212-afdb-4d8b-b756-08e1e7968a5e",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Logout User",
+            "url": "{{url}}api/user/logout",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-14T07:16:55.035Z",
+            "modified": "2023-07-18T09:59:14.110Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "830f88e7-d5bb-4e55-a271-ad6eec74f03e",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Get User Profile",
+            "url": "{{url}}api/user/get-user-profile",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-07-17T06:05:10.274Z",
+            "modified": "2023-07-17T06:06:17.930Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "18fc2a2f-ec8b-4079-8bf2-23fd22443054",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Add User Details",
+            "url": "{{url}}api/user/add-user-details",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-07-17T05:36:41.069Z",
+            "modified": "2023-07-17T06:31:14.719Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "team_id",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "name",
+                        "value": "unikwork"
+                    },
+                    {
+                        "name": "job_title",
+                        "value": "company"
+                    },
+                    {
+                        "name": "about_me",
+                        "value": "I'm Backend Engineer at UNIKWORK SYSTEMS LLP"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profile_image",
+                        "value": "d:\\download\\Round-01.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "55c00c63-4611-4ede-b939-eee3463fbda3",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Update User",
+            "url": "{{url}}api/user/update-user",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2023-07-17T06:22:28.814Z",
+            "modified": "2023-07-18T08:42:56.761Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "unikwork"
+                    },
+                    {
+                        "name": "email",
+                        "value": "uw111@gmail.com"
+                    },
+                    {
+                        "name": "team_id",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "name",
+                        "value": "UNIKWORK SYSTEMS LLP"
+                    },
+                    {
+                        "name": "job_title",
+                        "value": "Management"
+                    },
+                    {
+                        "name": "about_me",
+                        "value": "IT Service Provider based in Surat"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profile_image",
+                        "value": "d:\\download\\image-removebg-preview(4).png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "df34ba41-455e-43e0-907b-9157dc4cf339",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Chnage Password",
+            "url": "{{url}}api/user/change-password",
+            "method": "PATCH",
+            "sortNum": 70000,
+            "created": "2023-07-17T06:57:47.919Z",
+            "modified": "2023-07-17T07:19:38.454Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"old_password\": \"uw@116\",\n  \"new_password\": \"uw@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6bbed0e-ab14-4361-931f-a6a4317cb475",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "1e7130a5-99b0-4742-8046-b925d0110437",
+            "name": "Forgot Password",
+            "url": "{{url}}api/user/forgot-password",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-07-17T07:20:54.941Z",
+            "modified": "2023-07-19T06:53:23.419Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"new111emp@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9254b30f-f593-4554-87ad-82698b942159",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "3f858f09-440f-4586-8dc1-548f0210fc2a",
+            "name": "Admin Logout",
+            "url": "{{url}}api/admin/logout",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-07-17T12:41:54.127Z",
+            "modified": "2023-07-17T12:44:20.417Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6a28b667-e0b8-4fc9-9335-9d1388255698",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "3f858f09-440f-4586-8dc1-548f0210fc2a",
+            "name": "Admin Login",
+            "url": "{{url}}api/admin/login",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-07-17T12:23:12.490Z",
+            "modified": "2023-07-18T08:44:23.086Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"uw111@gmail.com\",\n  \"password\": \"uw@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7a1a746c-87e7-4a78-9301-17ecb2694180",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "71feac90-d384-4fee-86ae-7becd7169c13",
+            "name": "Create Team",
+            "url": "{{url}}api/admin/team/create-team",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-07-18T04:42:18.113Z",
+            "modified": "2023-07-18T08:45:39.836Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"NodeJS Team\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "238dfd9c-b557-4581-9bee-b4d594dbbfd8",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "71feac90-d384-4fee-86ae-7becd7169c13",
+            "name": "Update Team",
+            "url": "{{url}}api/admin/team/update-team",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-07-18T04:58:56.016Z",
+            "modified": "2023-07-18T08:46:07.802Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"3\",\n  \"description\": \"NodeJS BackEnd Web/App Development\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea122e82-caf7-41f0-888d-99d8feb68b1e",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "71feac90-d384-4fee-86ae-7becd7169c13",
+            "name": "Remove Team",
+            "url": "{{url}}api/admin/team/remove-team",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2023-07-18T05:53:07.232Z",
+            "modified": "2023-07-18T05:54:19.233Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8932647e-3ccb-4ead-a6f6-d256392e2212",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "71feac90-d384-4fee-86ae-7becd7169c13",
+            "name": "Get All Teams",
+            "url": "{{url}}api/admin/team/get-all-teams",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2023-07-18T05:58:35.426Z",
+            "modified": "2023-07-18T05:58:59.333Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a1b639bd-83d0-4a29-bf2c-5fe810f0b848",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "97be142f-2f2b-4d4a-b915-bf34fec6a7b8",
+            "name": "Create Project",
+            "url": "{{url}}api/project/create-project",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-07-18T08:46:37.990Z",
+            "modified": "2023-07-25T04:04:48.735Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"team_id\": 3,\n  \"name\": \"Wegig\",\n  \"description\": \"this is for testing purpose\",\n  \"color\": \"#000000\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "21cf1f98-a5da-4d05-b8fb-f3db094e0766",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "97be142f-2f2b-4d4a-b915-bf34fec6a7b8",
+            "name": "Get All Projects",
+            "url": "{{url}}api/project/get-all-projects",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-07-18T09:30:01.969Z",
+            "modified": "2023-07-18T09:31:06.648Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f8f46f97-96c2-432e-a377-6b1aa6649c25",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "97be142f-2f2b-4d4a-b915-bf34fec6a7b8",
+            "name": "Update Project",
+            "url": "{{url}}api/project/update-project",
+            "method": "PATCH",
+            "sortNum": 180000,
+            "created": "2023-07-18T09:51:48.629Z",
+            "modified": "2023-07-18T09:56:41.451Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"project_id\": 2,\n  \"team_id\": 1,\n  \"name\": \"Clarity Valley\",\n  \"description\": \"Maditation App\",\n  \"color\": \"#635485\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "886ce251-92b4-4454-811e-6cf7e88c4e9b",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "97be142f-2f2b-4d4a-b915-bf34fec6a7b8",
+            "name": "Delete Project",
+            "url": "{{url}}api/project/delete-project",
+            "method": "DELETE",
+            "sortNum": 190000,
+            "created": "2023-07-18T11:20:29.509Z",
+            "modified": "2023-07-18T11:21:13.960Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"project_id\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5b21aed8-a916-472d-b34e-23a11183aa02",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Create User",
+            "url": "{{url}}api/admin/user/create-user",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2023-07-18T12:09:10.406Z",
+            "modified": "2023-07-18T12:12:18.432Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"newemp\",\n  \"email\": \"newemp@gmail.com\",\n  \"password\": \"newemp@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ba887740-8aa4-4a7a-b6ad-f9dd4136624b",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Add User Details",
+            "url": "{{url}}api/admin/user/add-user-details",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2023-07-18T12:12:56.387Z",
+            "modified": "2023-07-18T12:48:17.127Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "New Employee"
+                    },
+                    {
+                        "name": "team_id",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "job_title",
+                        "value": "Testing Developer"
+                    },
+                    {
+                        "name": "about_me",
+                        "value": "I'm testing based"
+                    },
+                    {
+                        "name": "user_id",
+                        "value": "3"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profile_image",
+                        "value": "c:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2023-06-30 175411.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "80f068ca-9e84-4f45-ab73-80c554e56556",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Update User",
+            "url": "{{url}}api/admin/user/update-user",
+            "method": "PATCH",
+            "sortNum": 215000,
+            "created": "2023-07-18T12:50:54.594Z",
+            "modified": "2023-07-19T06:40:15.392Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "New Employee"
+                    },
+                    {
+                        "name": "team_id",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "job_title",
+                        "value": "Testing Developer"
+                    },
+                    {
+                        "name": "about_me",
+                        "value": "I'm testing based"
+                    },
+                    {
+                        "name": "user_id",
+                        "value": "4"
+                    },
+                    {
+                        "name": "username",
+                        "value": "newemp11"
+                    },
+                    {
+                        "name": "email",
+                        "value": "new111emp@gmail.com"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profile_image",
+                        "value": "c:\\Users\\DELL\\Pictures\\Screenshots\\Screenshot 2023-06-30 175411.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "dcf192c3-51ff-4947-a406-df9197c5f6df",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Remove User",
+            "url": "{{url}}api/admin/user/remove-user",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2023-07-18T12:55:24.395Z",
+            "modified": "2023-07-18T12:58:12.776Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2945cb5f-0cbf-4e86-bebf-b13b64b21166",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Get All User",
+            "url": "{{url}}api/admin/user/get-all-users",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2023-07-18T12:58:55.444Z",
+            "modified": "2023-07-18T12:59:22.087Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7f9ef4e6-d132-4afd-8ad4-e544039193b0",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Get Perticuler User",
+            "url": "{{url}}api/admin/user/get-user/3",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2023-07-18T13:00:32.871Z",
+            "modified": "2023-07-18T13:01:29.299Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "974c0c9c-1998-4ba9-8e78-6453635f4447",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Change Password",
+            "url": "{{url}}api/admin/user/change-password",
+            "method": "PATCH",
+            "sortNum": 260000,
+            "created": "2023-07-18T13:02:10.299Z",
+            "modified": "2023-07-18T13:04:19.328Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 3,\n  \"new_password\": \"newemp@111\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7fb9baea-4efd-49e4-9b34-5267fbfde457",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "50801ce0-b648-49eb-a359-ad17be1746ff",
+            "name": "Change User Status",
+            "url": "{{url}}api/admin/user/update-user-status",
+            "method": "PATCH",
+            "sortNum": 280000,
+            "created": "2023-07-18T13:04:39.279Z",
+            "modified": "2023-07-18T13:06:19.344Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 3,\n  \"is_active\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e20e5009-e383-4764-aba1-66851d5e7bc6",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Create Board",
+            "url": "{{url}}api/board/create-board",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2023-07-24T10:18:57.338Z",
+            "modified": "2023-07-25T04:05:19.969Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Wegig Backend\",\n  \"project_id\": 4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9db7e438-2f73-464b-b7fe-624c80f0971d",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Get All Boards",
+            "url": "{{url}}api/board/get-all-boards/",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2023-07-24T10:51:07.915Z",
+            "modified": "2023-07-25T04:03:17.559Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3ab07efb-5937-4d31-81c0-5124de269a3e",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Update Board",
+            "url": "{{url}}api/board/update-board/2",
+            "method": "PATCH",
+            "sortNum": 310000,
+            "created": "2023-07-24T10:56:53.055Z",
+            "modified": "2023-07-24T10:58:46.219Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Test-Updated Frontend\",\n  \"project_id\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "92dea1d1-8044-4094-ab5c-53860de3daf9",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Remove Board",
+            "url": "{{url}}api/board/remove-board/2",
+            "method": "DELETE",
+            "sortNum": 320000,
+            "created": "2023-07-24T10:59:41.845Z",
+            "modified": "2023-07-24T11:00:25.116Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0975f58e-00eb-4148-8722-d7c91cabc226",
+            "colId": "7c13eda1-1e91-4f19-ad5f-d6d9c3607bbe",
+            "containerId": "242876be-8207-49a3-8039-15318db1d507",
+            "name": "Get Board by Project ID",
+            "url": "{{url}}api/board/get-board/4",
+            "method": "GET",
+            "sortNum": 330000,
+            "created": "2023-07-25T04:02:04.316Z",
+            "modified": "2023-07-25T04:06:41.138Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "envId": "39f68495-099e-44dd-bed9-f89ef1718058"
+    }
+}
